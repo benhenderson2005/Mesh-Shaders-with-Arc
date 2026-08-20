@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "mesh-shaders-with-arc",
+	"version": "${version}",
+	"name": "Mesh Shaders with Arc",
+	"description": "Experimental Sodium-integrated Vulkan mesh-shader terrain renderer for Intel Arc GPUs.",
+	"authors": [
+		"TheBe"
+	],
+	"license": "LGPL-3.0-only",
+	"icon": "assets/mesh-shaders-with-arc/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.thebe.meshshadersarc.MeshShadersWithArcClient"
+		],
+		"sodium:config_api_user": [
+			"dev.thebe.meshshadersarc.config.ArcSodiumConfigEntrypoint"
+		],
+		"fabric-client-gametest": [
+			"dev.thebe.meshshadersarc.test.ArcTerrainClientGameTest"
+		]
+	},
+	"mixins": [
+		"mesh-shaders-with-arc.client.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*",
+		"sodium": "=0.9.1+mc26.2"
+	}
+}

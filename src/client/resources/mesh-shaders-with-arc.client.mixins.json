@@ -1,0 +1,23 @@
+{
+	"required": true,
+	"package": "dev.thebe.meshshadersarc.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"GpuDeviceAccessor",
+		"RenderPassAccessor",
+		"SodiumDefaultChunkRendererMixin",
+		"SodiumRenderRegionManagerMixin",
+		"SodiumRenderRegionMixin",
+		"SodiumRenderSectionManagerMixin",
+		"VulkanBackendMixin",
+		"VulkanConstMixin",
+		"VulkanDeviceMixin",
+		"VulkanRenderPassAccessor"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
